@@ -1,0 +1,86 @@
+<!-- register.html --><!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل طالب جديد</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    body {
+      background:linear-gradient(to bottom, #3969ca, #ffffff);
+      font-family: 'Cairo', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .register-container {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .register-form {
+      flex: 1;
+    }
+    .register-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #004466;
+    }
+    .register-form input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      color: #000;
+      background: #f9f9f9;
+    }
+    .register-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #006699;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .register-form button:hover {
+      background-color: #004466;
+    }
+    .side-image {
+      width: 150px;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .register-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .side-image {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <form class="register-form" method="post">
+      <h2>تسجيل بصمة وبيانات الطالب</h2>
+      <input name="name" placeholder="اسم الطالب" required>
+      <input name="father" placeholder="اسم الأب" required>
+      <input name="mother" placeholder="اسم الأم" required>
+      <input name="university_id" placeholder="الرقم الجامعي" required>
+      <input name="major" placeholder="الاختصاص" required>
+      <input name="year" placeholder="السنة الدراسية" required>
+      <button type="submit">تسجيل</button>
+    </form>
+  </div>
+</body>
+</html>
